@@ -1,0 +1,146 @@
+/* first section */
+.inter-logo {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 150px;
+}
+
+.link-1 {
+    font-weight: bold;
+    color: #252432;
+}
+
+.link-2,
+.link-3 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #8987A1;
+}
+
+.link-4 {
+    display: flex;
+    font-weight: 400;
+    font-size: 16px;
+    gap: 10px;
+    color: #000000;
+}
+
+nav img {
+    width: 135px;
+    height: 82px;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+.cart {
+    font-weight: 2px;
+    font-size: 15px;
+    /* height from Figma */
+    width: 22px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* @media screen and (min-width: 430px) and (max-width: 932px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 16px;
+  }
+
+  .img img {
+    max-width: 100px;
+    height: auto;
+  }
+
+  .links {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+
+  .links li {
+    list-style: none;
+  }
+
+  .links li:not(:last-child) {
+    display: none;
+  }
+
+  .link-4 {
+    font-size: 16px;
+    color: #000;
+    white-space: nowrap;         /* Prevent breaking text like "Ca" only 
+    overflow: hidden;
+    text-overflow: ellipsis;     /* Optional: shows "..." if overflowed 
+  }
+} */
+
+
+
+@media screen and (min-width: 430px) and (max-width: 932px) {
+
+    /* .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } */
+    .header{
+        padding: 13px 16px;
+    }
+    .nav {
+        display: flex;
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .links {
+        display: flex;
+    }
+
+    .link-1,
+    .link-2,
+    .link-3 {
+        display: none;
+    }
+
+    nav img {
+        width: 63px;
+        height: 38px;
+    }
+}
