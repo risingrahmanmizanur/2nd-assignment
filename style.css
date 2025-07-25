@@ -4,7 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* .hidden{
+    display: none !important;
+} */
 body {
     font-family: 'Noto Serif', serif;
     padding: 20px;
@@ -74,9 +76,7 @@ nav ul li {
     width: 22px;
 }
 
-.hidden {
-    display: none;
-}
+
 
 @media screen and (max-width: 768px) {
     .nav {
@@ -329,68 +329,164 @@ nav ul li {
 /* join section */
 
 .join-section {
-  background-image: url('/assets/news-letter-bg.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  min-height: 533px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+    background-image: url('assets/news-letter-bg.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 533px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .join-div {
-  width: 100%;
-  max-width: 700px;
-  text-align: center;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
 }
 
 .join-div h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .join-form {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 0;
-  width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0;
+    width: 100%;
 }
 
 .join-form input[type="email"] {
-  padding: 12px 16px;
-  font-size: 1rem;
-  border: none;
-  width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: none;
+    width: 100%;
 }
 
 .join-form button {
-  padding: 12px 24px;
-  font-size: 1rem;
-  background-color: #E95A08;
-  color: #FFFFFF;
-  border: none;
-  cursor: pointer;
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #E95A08;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
 }
 
 
 @media screen and (max-width: 768px) {
-  .join-div h2 {
-    font-size: 1.5rem;
-  }
+    .join-div h2 {
+        font-size: 1.5rem;
+    }
 
-  .join-form {
-    grid-template-columns: 1fr auto;
-  }
+    .join-form {
+        grid-template-columns: 1fr auto;
+    }
 
-  .join-form input[type="email"] {
-    font-size: 0.9rem;
-  }
+    .join-form input[type="email"] {
+        font-size: 0.9rem;
+    }
 
-  .join-form button {
-    padding: 12px;
-    font-size: 0.9rem;
-  }
+    .join-form button {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+}
+/* end of join part */
+/* Section Styling */
+.plants-section {
+    padding: 40px 20px;
+    max-width: 1140px;
+    margin: auto;
+    overflow-x: hidden; /* Prevent accidental scroll */
+}
+
+/* Title and Subtitle Centered */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    color: #000000 !important ;
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.section-header h2 span {
+    color: #E95A08;
+}
+
+.section-header p {
+    color: #000000 ;
+    opacity: 0.5;
+    font-size: 22px;
+    max-width: 700px;
+    margin: auto;
+    font-family: "Inter", sans-serif;
+}
+
+/* Grid Layout */
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Card Styling */
+.food {
+    background-color: #fff;
+    /* padding: 20px; */
+    text-align: center;
+}
+
+.food img {
+    width: 100%;
+    /* border-radius: 6px; */
+    /* margin-bottom: 15px; */
+}
+.food h3, .price{
+        font-size: 16px;
+    }
+.food h3 {
+    /* font-size: 22px; */
+    font-weight: 500;
+    margin: 10px 0 5px;
+    color: #111111;
+    font-family: "Inter", sans-serif;
+}
+
+.food .price {
+    font-weight: bold;
+    color: #111111;
+    margin-bottom: 15px;
+    font-family: "Inter", sans-serif;
+}
+
+/* Button Styling */
+.btn {
+    background-color: #E95A08;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+
+/* Tablet (768px and below) */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-header h2 {
+        font-size: 22px;
+    }
 }
 
