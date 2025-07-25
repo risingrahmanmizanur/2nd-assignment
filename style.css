@@ -2,7 +2,7 @@
 .inter-logo {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 150px;
+    padding: 30px 20px;
 }
 
 .link-1 {
@@ -27,13 +27,14 @@
 
 .link-4 {
     display: flex;
-    font-weight: 400;
-    font-size: 16px;
+    align-items: center;
     gap: 10px;
+    font-size: 16px;
+    font-weight: 400;
     color: #000000;
 }
 
-nav img {
+.img img {
     width: 135px;
     height: 82px;
 }
@@ -47,6 +48,7 @@ nav ul {
     gap: 20px;
     padding: 0;
     margin: 0;
+    align-items: center;
 }
 
 nav ul li {
@@ -54,9 +56,7 @@ nav ul li {
 }
 
 .cart {
-    font-weight: 2px;
     font-size: 15px;
-    /* height from Figma */
     width: 22px;
 }
 
@@ -64,83 +64,260 @@ nav ul li {
     display: none;
 }
 
-/* @media screen and (min-width: 430px) and (max-width: 932px) {
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px 16px;
-  }
-
-  .img img {
-    max-width: 100px;
-    height: auto;
-  }
-
-  .links {
-    display: flex;
-    padding: 0;
-    margin: 0;
-  }
-
-  .links li {
-    list-style: none;
-  }
-
-  .links li:not(:last-child) {
-    display: none;
-  }
-
-  .link-4 {
-    font-size: 16px;
-    color: #000;
-    white-space: nowrap;         /* Prevent breaking text like "Ca" only 
-    overflow: hidden;
-    text-overflow: ellipsis;     /* Optional: shows "..." if overflowed 
-  }
-} */
-
-
-
-@media screen and (min-width: 430px) and (max-width: 932px) {
-
-    /* .nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    } */
-    .header{
-        padding: 13px 16px;
-    }
+@media screen and (max-width: 768px) {
     .nav {
-        display: flex;
         padding: 20px;
-        justify-content: space-between;
     }
 
     .links {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
 
-    .link-1,
-    .link-2,
-    .link-3 {
+    .link-1, .link-2, .link-3 {
         display: none;
     }
 
-    nav img {
-        width: 63px;
-        height: 38px;
+    .img img {
+        width: 70px;
+        height: auto;
+    }
+
+    .link-4 {
+        margin-left: auto;
+    }
+}
+/* nav end */
+
+/* banner start */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.banner-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.banner-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #E95A08
+}
+
+.banner-title span {
+    color: #000000;
+}
+
+.banner-description {
+    /* margin-top: 20px; */
+    font-size: 18px;
+    color: #000000;
+    opacity: 0.5;
+    max-width: 500px;
+    font-family: "Inter", sans-serif;
+}
+
+.banner-image {
+    /* flex: 1; */
+    min-width: 280px;
+    text-align: center;
+}
+
+.banner-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        text-align: left;
+        padding: 20px 10px;
+    }
+
+    .banner-title {
+        font-size: 24px;
+    }
+
+    .banner-content {
+        order: 2;
+    }
+
+    .banner-image {
+        order: 1;
+    }
+}
+
+/* banner end */
+
+/* main */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Serif', serif;
+    padding: 20px;
+    color: white;
+}
+
+/* main */
+
+/* deal challenge section */
+.deals {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-inline: 20px;
+}
+
+.deal-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.lates {
+    color: #E95A08 !important;
+}
+
+.deal-para {
+    font-size: 14px;
+    color: #000000;
+    opacity: 0.5;
+    max-width: 888px;
+    font-weight: 400;
+    margin: 10px auto 0;
+    padding: 10px 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .deal-title {
+        font-size: 50px;
+    }
+
+    .deal-para {
+        font-size: 22px;
+        padding: 16px 30px;
+        font-family: "Inter", sans-serif;
+    }
+}
+
+/* Default mobile layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.left-column {
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    background-size: cover;
+    background-position: center;
+    /* filter: brightness(80%); */
+    height: 220px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card-content1,
+.card-content2,
+.card-content3 {
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+.card-content1 h2,
+.card-content2 h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-content3 h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.card-content1 h2,
+.card-content2 h2,
+.card-content3 h2 {
+    font-size: 20px;
+}
+
+
+.card-content1 a,
+.card-content2 a,
+.card-content3 a {
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+
+/*  Desktop layout */
+@media screen and (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr 2fr;
+        height: 450px;
+    }
+
+    .left-column {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .right-column {
+        height: 100%;
+    }
+
+    .card {
+        height: 100%;
+    }
+
+    .card-content1 h2,
+    .card-content2 h2 {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Inter", sans-serif;
+    }
+
+    .card-content3 h2 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .card-content1 a,
+    .card-content2 a {
+        font-size: 16px;
+        font-family: "Inter", sans-serif;
+    }
+
+    .card-content3 a {
+        font-size: 28px;
+        font-family: "Inter", sans-serif;
     }
 }
