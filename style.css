@@ -1,3 +1,17 @@
+/* main */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Serif', serif;
+    padding: 20px;
+    color: white;
+}
+
+/* main */
 /* first section */
 .inter-logo {
     font-family: "Inter", sans-serif;
@@ -76,7 +90,9 @@ nav ul li {
         width: 100%;
     }
 
-    .link-1, .link-2, .link-3 {
+    .link-1,
+    .link-2,
+    .link-3 {
         display: none;
     }
 
@@ -89,6 +105,7 @@ nav ul li {
         margin-left: auto;
     }
 }
+
 /* nav end */
 
 /* banner start */
@@ -160,20 +177,7 @@ nav ul li {
 
 /* banner end */
 
-/* main */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Noto Serif', serif;
-    padding: 20px;
-    color: white;
-}
-
-/* main */
 
 /* deal challenge section */
 .deals {
@@ -321,3 +325,72 @@ body {
         font-family: "Inter", sans-serif;
     }
 }
+
+/* join section */
+
+.join-section {
+  background-image: url('/assets/news-letter-bg.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 533px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.join-div {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.join-div h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.join-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0;
+  width: 100%;
+}
+
+.join-form input[type="email"] {
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: none;
+  width: 100%;
+}
+
+.join-form button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #E95A08;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+  .join-div h2 {
+    font-size: 1.5rem;
+  }
+
+  .join-form {
+    grid-template-columns: 1fr auto;
+  }
+
+  .join-form input[type="email"] {
+    font-size: 0.9rem;
+  }
+
+  .join-form button {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
+
